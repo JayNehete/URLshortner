@@ -1,0 +1,25 @@
+resolve function helps our shortened url to check the database for t8he original url and take us to the exact address
+
+creating the folders and files according to the requirements and the project structure
+folders --> api, data, db     and the main.go file and the Dockerfile
+			|->database, helpers, routes 
+			
+starting with the main file :-
+* We start off with setting up the routes for our service with "fiber"
+* Then we create an instance of Fiber and |-> use the instance(app) in setup routes
+* Finally we start the server
+
++++ moving to the shorten.go file +++
+* Creating our structs for our request and response
+-> parsing the body of the request the user is sending sending
+-> checking if the URL is real URL
+-> checking if sending our domain
+-> enforce HTTPS, SSL
+
++++ moving to the helpers.go file +++
+-> we create our function to enforce https here
+-> we crete our domain error function here so that no one 
+   pastes our own apps link in request so we take care of it and free the url of the clashing URL
+
+
+use go mod tidy to get all the necessary and used packages
